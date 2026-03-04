@@ -11,15 +11,14 @@ namespace Assignment_7___Examination_Management_System
 
         public Answer(int id, string text)
         {
-            if (text == null) throw new ArgumentException("Text cannot be null");
+            if (string.IsNullOrEmpty(text)) throw new ArgumentException("Text cannot be null or empty");
             if (id <= 0) throw new ArgumentException("Id must be greater than 0");
-
             Id = id;
             Text = text;
         }
-        public override string? ToString()
+        public override string ToString()
         {
-            return Text;
+            return $"Answer Id is {Id}, Text: {Text}";
         }
 
         public override bool Equals(object? obj)
