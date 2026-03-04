@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|g:\\iti 9m\\c#\\d07\\lab task\\assignment 7 - examination management system\\assignment 7 - examination management system\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|solutionrelative:assignment 7 - examination management system\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|g:\\iti 9m\\c#\\d07\\lab task\\assignment 7 - examination management system\\assignment 7 - examination management system\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|solutionrelative:assignment 7 - examination management system\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|g:\\iti 9m\\c#\\d07\\lab task\\assignment 7 - examination management system\\assignment 7 - examination management system\\finalexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|solutionrelative:assignment 7 - examination management system\\finalexam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|g:\\iti 9m\\c#\\d07\\lab task\\assignment 7 - examination management system\\assignment 7 - examination management system\\chooseonequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|solutionrelative:assignment 7 - examination management system\\chooseonequestion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|g:\\iti 9m\\c#\\d07\\lab task\\assignment 7 - examination management system\\assignment 7 - examination management system\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47D478AD-69F6-5D03-FB71-4758EFC96532}|Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System.csproj|solutionrelative:assignment 7 - examination management system\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 307,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChooseOneQuestion.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\ChooseOneQuestion.cs",
+              "RelativeDocumentMoniker": "Assignment 7 - Examination Management System\\ChooseOneQuestion.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\ChooseOneQuestion.cs",
+              "RelativeToolTip": "Assignment 7 - Examination Management System\\ChooseOneQuestion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:08:48.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Student.cs",
+              "RelativeDocumentMoniker": "Assignment 7 - Examination Management System\\Student.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Student.cs",
+              "RelativeToolTip": "Assignment 7 - Examination Management System\\Student.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T14:45:54.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FinalExam.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\FinalExam.cs",
+              "RelativeDocumentMoniker": "Assignment 7 - Examination Management System\\FinalExam.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\FinalExam.cs",
+              "RelativeToolTip": "Assignment 7 - Examination Management System\\FinalExam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T14:13:53.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Subject.cs",
+              "RelativeDocumentMoniker": "Assignment 7 - Examination Management System\\Subject.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Subject.cs",
+              "RelativeToolTip": "Assignment 7 - Examination Management System\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T23:28:38.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Exam.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Exam.cs",
+              "RelativeDocumentMoniker": "Assignment 7 - Examination Management System\\Exam.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D07\\Lab Task\\Assignment 7 - Examination Management System\\Assignment 7 - Examination Management System\\Exam.cs",
+              "RelativeToolTip": "Assignment 7 - Examination Management System\\Exam.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA3wEcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-02T23:22:53.338Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 93,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Department.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Department.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Department.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Department.cs",
+              "RelativeToolTip": "..\\..\\..\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:20:12.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Employee.cs",
+              "ToolTip": "G:\\ITI 9M\\C#\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Employee.cs",
+              "RelativeToolTip": "..\\..\\..\\D10\\Day 10 Lab Task\\Day 10 Lab Task\\Employee.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T14:17:59.004Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

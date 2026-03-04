@@ -1,0 +1,14 @@
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\bin\Debug\net10.0\Assignment 7 - Examination Management System.exe
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\bin\Debug\net10.0\Assignment 7 - Examination Management System.deps.json
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\bin\Debug\net10.0\Assignment 7 - Examination Management System.runtimeconfig.json
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\bin\Debug\net10.0\Assignment 7 - Examination Management System.dll
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\bin\Debug\net10.0\Assignment 7 - Examination Management System.pdb
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.GeneratedMSBuildEditorConfig.editorconfig
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.AssemblyInfoInputs.cache
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.AssemblyInfo.cs
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.csproj.CoreCompileInputs.cache
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.dll
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\refint\Assignment 7 - Examination Management System.dll
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.pdb
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.genruntimeconfig.cache
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\ref\Assignment 7 - Examination Management System.dll
