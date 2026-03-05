@@ -11,7 +11,7 @@ namespace Assignment_7___Examination_Management_System
 
         public override bool CheckAnswer(Answer studentAnswer)
         {
-            return studentAnswer.Equals(CorrectAnswer); // same as TrueFalse
+            return studentAnswer.Equals(CorrectAnswer); 
         }
 
         public override void Display()

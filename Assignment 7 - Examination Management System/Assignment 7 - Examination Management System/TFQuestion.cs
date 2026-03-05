@@ -18,7 +18,7 @@ namespace Assignment_7___Examination_Management_System
         public override void Display()
         {
             Console.WriteLine($"Q: {Body}");
-            foreach (Answer? answer in AnswerList.answers)
+            foreach (Answer answer in AnswerList.answers)
                 Console.WriteLine($"{answer.Id}. {answer.Text}");
         }
     }
