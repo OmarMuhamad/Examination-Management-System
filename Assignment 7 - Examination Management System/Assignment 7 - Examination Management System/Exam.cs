@@ -26,8 +26,6 @@ namespace Assignment_7___Examination_Management_System
                 throw new ArgumentException("Number of questions must be greater than 0");
             if (questions == null)
                 throw new ArgumentNullException("Questions cannot be null");
-            if (questions.Count != numberOfQuestions)
-                throw new ArgumentException("Number of questions must match questions list count");
             if (questionAnswerDictionary == null)
                 throw new ArgumentNullException("QuestionAnswerDictionary cannot be null");
             if (subject == null)
