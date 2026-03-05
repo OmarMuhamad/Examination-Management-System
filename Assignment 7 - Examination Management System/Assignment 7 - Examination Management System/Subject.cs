@@ -7,28 +7,31 @@ namespace Assignment_7___Examination_Management_System
     internal class Subject
     {
         public string Name { get; set; }
-        public List<Student> students { get; set; }
+        public List<Student> Students { get; private set; }
+
 
         public Subject(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+                throw new ArgumentException("Name cannot be null or empty");
             Name = name;
-            students = new List<Student>();
+            Students = new List<Student>();
         }
         public bool Enroll(Student student)
         {
-            if (students.Contains(student))
-            {
+            if (student == null)
+                throw new ArgumentNullException("Student cannot be null");
+            if (Students.Contains(student))
                 return false;
-            }
-            students.Add(student);
+            Students.Add(student);
             return true;
         }
         public void NotifyStudents(Exam exam)
         {
-            foreach(Student s in students)
-            {
-                exam.ExamStarted += s.OnExamStarted; // subscripe all the students
-            }
+            if (exam == null)
+                throw new ArgumentNullException("Exam cannot be null");
+            foreach (Student s in Students)
+                exam.ExamStarted += s.OnExamStarted;
         }
     }
 }

@@ -17,7 +17,11 @@ namespace Assignment_7___Examination_Management_System
         }
         public void OnExamStarted(object sender, ExamEventArgs e)
         {
-            Console.WriteLine($"Exam Has Started for Student {Name}, {Id}");
+            Console.WriteLine($"Exam Has Started for Student {Name}, {Id} in Subject: {e.Subject.Name}");
+        }
+        public override string ToString()
+        {
+            return $"Student: {Name}, ID: {Id}";
         }
     }
 }
