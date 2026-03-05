@@ -4,23 +4,35 @@ using System.Text;
 
 namespace Assignment_7___Examination_Management_System
 {
-    public delegate void ExamStartedHandler<ExamEventArgs>(object sender, ExamEventArgs e);
     internal abstract class Exam : ICloneable, IComparable<Exam>
     {
-        public int Time { get; set; }
-        public int NumberOfQuestions { get; set; }
-        public List<Question> Questions { get; set; }
+        public int Time { get; private set; }
+        public int NumberOfQuestions { get; private set; }
+        public List<Question> Questions { get; private set; }
+        public Subject Subject { get; private set; }
         public Dictionary<Question, Answer> QuestionAnswerDictionary  { get; set;}
-        public Subject Subject { get; set; }
         public ExamMode ExamMode { get; set; }
 
-        public event ExamStartedHandler<ExamEventArgs> ExamStarted;
+        public event ExamStartedHandler ExamStarted; // eventhandler
 
-        
-        public Exam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, Answer> questionAnswerDictionary, Subject subject, ExamMode examMode)
+
+        public Exam(int time, int numberOfQuestions, List<Question> questions,
+                Dictionary<Question, Answer> questionAnswerDictionary,
+                Subject subject, ExamMode examMode)
         {
-            if (time <= 0) throw new ArgumentException("Time must be greater than 0");
-            if (numberOfQuestions <= 0) throw new ArgumentException("Number of questions must be greater than 0");
+            if (time <= 0)
+                throw new ArgumentException("Time must be greater than 0");
+            if (numberOfQuestions <= 0)
+                throw new ArgumentException("Number of questions must be greater than 0");
+            if (questions == null)
+                throw new ArgumentNullException("Questions cannot be null");
+            if (questions.Count != numberOfQuestions)
+                throw new ArgumentException("Number of questions must match questions list count");
+            if (questionAnswerDictionary == null)
+                throw new ArgumentNullException("QuestionAnswerDictionary cannot be null");
+            if (subject == null)
+                throw new ArgumentNullException("Subject cannot be null");
+
             Time = time;
             NumberOfQuestions = numberOfQuestions;
             QuestionAnswerDictionary = questionAnswerDictionary;
@@ -28,6 +40,7 @@ namespace Assignment_7___Examination_Management_System
             Subject = subject;
             ExamMode = examMode;
         }
+
         public abstract void ShowExam();
         public virtual void Start()
         {
