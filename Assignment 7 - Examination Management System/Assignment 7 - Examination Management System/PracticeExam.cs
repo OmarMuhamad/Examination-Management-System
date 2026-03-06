@@ -6,7 +6,7 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class PracticeExam : Exam
     {
-        public PracticeExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, Answer> questionAnswerDictionary, Subject subject, ExamMode examMode)
+        public PracticeExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, List<Answer>> questionAnswerDictionary, Subject subject, ExamMode examMode)
         : base(time, numberOfQuestions, questions, questionAnswerDictionary, subject, examMode) { }
 
         public override void ShowExam()
@@ -19,32 +19,68 @@ namespace Assignment_7___Examination_Management_System
         }
         public override void Finish()
         {
-            base.Finish(); 
-
-            Console.WriteLine("=== Exam Results ===");
-            int totalScore = 0;
-
-            foreach (var entry in QuestionAnswerDictionary)
+            using (StreamWriter writer = new StreamWriter($"PracticalExamResult{this.Subject.Name}.txt", append: false))
             {
-                Question question = entry.Key;
-                Answer studentAnswer = entry.Value;
+                base.Finish();
 
-                Console.WriteLine($"Q: {question.Body}");
-                Console.WriteLine($"Your Answer:    {studentAnswer.Text}");
-                Console.WriteLine($"Correct Answer: {question.CorrectAnswer.Text}");
+                Console.WriteLine("=== Exam Results ===");
+                writer.WriteLine("=== Exam Results ===");
+                int totalScore = 0;
 
-                if (question.CheckAnswer(studentAnswer))
+                foreach (var entry in QuestionAnswerDictionary)
                 {
-                    totalScore += question.Marks;
-                    Console.WriteLine("Correct!");
+                    Question question = entry.Key;
+                    List<Answer> studentAnswers = entry.Value;
+
+                    Console.WriteLine($"{question.Header}: {question.Body}");
+                    writer.WriteLine($"{question.Header}: {question.Body}");
+
+                    if (question is ChooseAll chooseAll)
+                    {
+                        Console.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
+                        writer.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
+                        Console.WriteLine($"Correct Answers: {string.Join(", ", chooseAll.CorrectAnswers.Select(a => a.Text))}");
+                        writer.WriteLine($"Correct Answers: {string.Join(", ", chooseAll.CorrectAnswers.Select(a => a.Text))}");
+
+                        if (chooseAll.CheckAnswers(studentAnswers))
+                        {
+                            totalScore += question.Marks;
+                            Console.WriteLine("Correct!");
+                            writer.WriteLine("Correct!");
+                        }
+                        else
+                        {
+
+                            Console.WriteLine("Wrong!");
+                            writer.WriteLine("Wrong!");
+                        } 
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Your Answer:    {studentAnswers[0].Text}");
+                        writer.WriteLine($"Your Answer:    {studentAnswers[0].Text}");
+                        Console.WriteLine($"Correct Answer: {question.CorrectAnswer.Text}");
+                        writer.WriteLine($"Correct Answer: {question.CorrectAnswer.Text}");
+
+                        if (question.CheckAnswer(studentAnswers[0]))
+                        {
+                            totalScore += question.Marks;
+                            Console.WriteLine("Correct!");
+                            writer.WriteLine("Correct!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Wrong!");
+                            writer.WriteLine("Wrong!");
+                        } 
+                    }
+                    Console.WriteLine("------------------");
+                    writer.WriteLine("------------------");
                 }
-                else
-                {
-                    Console.WriteLine("Wrong!");
-                }
-                Console.WriteLine("------------------");
+                Console.WriteLine($"Final Grade: {totalScore}");
+                writer.WriteLine($"Final Grade: {totalScore}");
             }
-            Console.WriteLine($"Final Grade: {totalScore}");
+            
         }
     }
 }

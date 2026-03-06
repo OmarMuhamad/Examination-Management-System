@@ -9,12 +9,12 @@ namespace Assignment_7___Examination_Management_System
     public class AnswerList
     {
         public List<Answer> answers { get; set; }
-        public int Count { get; private set; }
+        public int Count => answers.Count;
         public AnswerList()
         {
             answers = new List<Answer>();
         }
-        public void AddAnswer(Answer answer) // composition
+        public void Add(Answer answer) // composition
         {
             if (answer == null) throw new ArgumentNullException("Answer cannot be null");
             answers.Add(answer);

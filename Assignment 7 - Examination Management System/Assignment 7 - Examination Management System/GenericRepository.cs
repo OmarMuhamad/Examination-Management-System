@@ -20,7 +20,7 @@ namespace Assignment_7___Examination_Management_System
             if (item == null) throw new ArgumentNullException("Item cannot be null");
             if (current == items.Length)
             {
-                T[] newItems = new T[items.Length * 2];
+                T[] newItems = new T[items.Length == 0 ? 4 : items.Length * 2];
                 for (int i = 0; i < current; i++)
                     newItems[i] = items[i];
                 items = newItems;

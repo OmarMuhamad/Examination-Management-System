@@ -1,0 +1,17 @@
+=== Exam Results ===
+Q1: Is 3 an odd number? 
+Your Answer:    True
+Correct Answer: True
+Correct!
+------------------
+Q2: What is 2 + 2?
+Your Answer:    3
+Correct Answer: 4
+Wrong!
+------------------
+Q3: Which are even numbers?
+Your Answers: 2
+Correct Answers: 2, 4, 6
+Wrong!
+------------------
+Final Grade: 10

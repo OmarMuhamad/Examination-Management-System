@@ -10,7 +10,7 @@ namespace Assignment_7___Examination_Management_System
         public string Body { get; set; }
         public int Marks { get; set; }
         public AnswerList AnswerList { get; set; }
-        public Answer CorrectAnswer { get; set; }
+        public Answer CorrectAnswer { get; set; } // will not care about it in case of chooseAll
         public abstract void Display();
         public abstract bool CheckAnswer(Answer studentAnswer);
 

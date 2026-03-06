@@ -12,3 +12,4 @@ G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignmen
 G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.pdb
 G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.genruntimeconfig.cache
 G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\ref\Assignment 7 - Examination Management System.dll
+G:\ITI 9M\C#\D07\Lab Task\Assignment 7 - Examination Management System\Assignment 7 - Examination Management System\obj\Debug\net10.0\Assignment 7 - Examination Management System.sourcelink.json

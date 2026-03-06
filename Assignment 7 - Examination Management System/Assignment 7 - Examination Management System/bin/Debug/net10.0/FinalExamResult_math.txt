@@ -1,0 +1,10 @@
+=== Exam Results ===
+Q1: Is 3 an odd number? 
+Your Answer: True
+------------------
+Q2: What is 2 + 2?
+Your Answer: 5
+------------------
+Q3: Which are even numbers?
+Your Answers: 2, 4, 3
+------------------

@@ -4,20 +4,20 @@ using System.Text;
 
 namespace Assignment_7___Examination_Management_System
 {
-    internal abstract class Exam : ICloneable, IComparable<Exam>
+    internal abstract class Exam : IComparable<Exam>, ICloneable, IExamBehavior
     {
         public int Time { get; private set; }
         public int NumberOfQuestions { get; private set; }
         public List<Question> Questions { get; private set; }
         public Subject Subject { get; private set; }
-        public Dictionary<Question, Answer> QuestionAnswerDictionary  { get; set;}
+        public Dictionary<Question, List<Answer>> QuestionAnswerDictionary  { get; set;}
         public ExamMode ExamMode { get; set; }
 
         public event ExamStartedHandler ExamStarted; // eventhandler
 
 
         public Exam(int time, int numberOfQuestions, List<Question> questions,
-                Dictionary<Question, Answer> questionAnswerDictionary,
+                Dictionary<Question, List<Answer>> questionAnswerDictionary,
                 Subject subject, ExamMode examMode)
         {
             if (time <= 0)
@@ -55,12 +55,17 @@ namespace Assignment_7___Examination_Management_System
         }
         public void CorrectExam(){
             int totalScore = 0;
-            foreach(KeyValuePair<Question, Answer> q in QuestionAnswerDictionary)
+            foreach(KeyValuePair<Question, List<Answer>> q in QuestionAnswerDictionary)
             {
-
-                if (q.Key.CorrectAnswer.Equals(q.Value))
+                if (q.Key is ChooseAll chooseAll)
                 {
-                    totalScore += q.Key.Marks;
+                    if (chooseAll.CheckAnswers(q.Value)) // pass to it the student Answers
+                        totalScore += q.Key.Marks;
+                }
+                else
+                {
+                    if (q.Key.CorrectAnswer.Equals(q.Value[0]))
+                        totalScore += q.Key.Marks;
                 }
             }
             Console.WriteLine($"Total Score: {totalScore}");

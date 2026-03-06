@@ -7,9 +7,9 @@ namespace Assignment_7___Examination_Management_System
     internal class ChooseAll : Question
     {
         public List<Answer> CorrectAnswers { get; set; }
-        public ChooseAll(string header, string body, int marks, List<Answer> correctOnes) : base(header, body, marks)
+        public ChooseAll(string header, string body, int marks, List<Answer> correctAnswers) : base(header, body, marks)
         {
-            CorrectAnswers = correctOnes;
+            CorrectAnswers = correctAnswers;
         }
         public override bool CheckAnswer(Answer studentAnswer)
         {
@@ -29,7 +29,7 @@ namespace Assignment_7___Examination_Management_System
         }
         public override void Display()
         {
-            Console.WriteLine($"Q: {Body} (Select ALL that apply)");
+            Console.WriteLine($"{Header}: {Body} (Select All that apply)");
             foreach (Answer answer in AnswerList.answers)
                 Console.WriteLine($"{answer.Id}. {answer.Text}");
         }

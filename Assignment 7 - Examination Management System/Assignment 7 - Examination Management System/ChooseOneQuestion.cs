@@ -6,8 +6,10 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class ChooseOneQuestion : Question
     {
-        public ChooseOneQuestion(string header, string body, int marks)
-        : base(header, body, marks) { }
+        public ChooseOneQuestion(string header, string body, int marks, Answer answer)
+        : base(header, body, marks) {
+            CorrectAnswer = answer;
+        }
 
         public override bool CheckAnswer(Answer studentAnswer)
         {
@@ -16,7 +18,7 @@ namespace Assignment_7___Examination_Management_System
 
         public override void Display()
         {
-            Console.WriteLine($"Q: {Body}");
+            Console.WriteLine($"{Header}: {Body}");
             foreach (Answer answer in AnswerList.answers)
                 Console.WriteLine($"{answer.Id}. {answer.Text}");
         }
