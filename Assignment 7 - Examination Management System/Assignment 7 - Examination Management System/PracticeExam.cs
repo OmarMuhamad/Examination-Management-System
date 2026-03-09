@@ -6,7 +6,7 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class PracticeExam : Exam
     {
-        public PracticeExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, List<Answer>> questionAnswerDictionary, Subject subject, ExamMode examMode)
+        public PracticeExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, Answer> questionAnswerDictionary, Subject subject, ExamMode examMode)
         : base(time, numberOfQuestions, questions, questionAnswerDictionary, subject, examMode) { }
 
         public override void ShowExam()
@@ -30,19 +30,29 @@ namespace Assignment_7___Examination_Management_System
                 foreach (var entry in QuestionAnswerDictionary)
                 {
                     Question question = entry.Key;
-                    List<Answer> studentAnswers = entry.Value;
+                    Answer studentAnswer = entry.Value;
 
                     Console.WriteLine($"{question.Header}: {question.Body}");
                     writer.WriteLine($"{question.Header}: {question.Body}");
 
                     if (question is ChooseAll chooseAll)
                     {
-                        Console.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
-                        writer.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
-                        Console.WriteLine($"Correct Answers: {string.Join(", ", chooseAll.CorrectAnswers.Select(a => a.Text))}");
-                        writer.WriteLine($"Correct Answers: {string.Join(", ", chooseAll.CorrectAnswers.Select(a => a.Text))}");
+                        var selectedIds = studentAnswer.Text.Split(' ');
+                        var selectedTexts = chooseAll.AnswerList.answers
+                            .Where(option => selectedIds.Contains(option.Id.ToString()))
+                            .Select(option => option.Text);
 
-                        if (chooseAll.CheckAnswers(studentAnswers))
+                        Console.WriteLine($"Your Answers: {string.Join(", ", selectedTexts)}");
+                        writer.WriteLine($"Your Answers: {string.Join(", ", selectedTexts)}");
+
+                        var correctIds = chooseAll.CorrectAnswer.Text.Split(' ');
+                        var correctTexts = chooseAll.AnswerList.answers
+                            .Where(option => correctIds.Contains(option.Id.ToString()))
+                            .Select(option => option.Text);
+
+                        Console.WriteLine($"Correct Answers: {string.Join(", ", correctTexts)}");
+                        writer.WriteLine($"Correct Answers: {string.Join(", ", correctTexts)}");
+                        if (chooseAll.CheckAnswer(studentAnswer))
                         {
                             totalScore += question.Marks;
                             Console.WriteLine("Correct!");
@@ -57,12 +67,12 @@ namespace Assignment_7___Examination_Management_System
                     }
                     else
                     {
-                        Console.WriteLine($"Your Answer:    {studentAnswers[0].Text}");
-                        writer.WriteLine($"Your Answer:    {studentAnswers[0].Text}");
+                        Console.WriteLine($"Your Answer:    {studentAnswer.Text}");
+                        writer.WriteLine($"Your Answer:    {studentAnswer.Text}");
                         Console.WriteLine($"Correct Answer: {question.CorrectAnswer.Text}");
                         writer.WriteLine($"Correct Answer: {question.CorrectAnswer.Text}");
 
-                        if (question.CheckAnswer(studentAnswers[0]))
+                        if (question.CheckAnswer(studentAnswer))
                         {
                             totalScore += question.Marks;
                             Console.WriteLine("Correct!");

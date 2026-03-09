@@ -6,9 +6,8 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class TFQuestion : Question
     {
-        public TFQuestion(string header, string body, int marks, Answer answer) : base(header, body, marks)
+        public TFQuestion(string header, string body, int marks, Answer answer) : base(header, body, marks, answer)
         {
-            CorrectAnswer = answer;
         }
 
         public override bool CheckAnswer(Answer studentAnswer)

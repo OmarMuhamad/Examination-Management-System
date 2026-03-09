@@ -10,14 +10,14 @@ namespace Assignment_7___Examination_Management_System
         public int NumberOfQuestions { get; private set; }
         public List<Question> Questions { get; private set; }
         public Subject Subject { get; private set; }
-        public Dictionary<Question, List<Answer>> QuestionAnswerDictionary  { get; set;}
+        public Dictionary<Question, Answer> QuestionAnswerDictionary  { get; set;}
         public ExamMode ExamMode { get; set; }
 
         public event ExamStartedHandler ExamStarted; // eventhandler
 
 
         public Exam(int time, int numberOfQuestions, List<Question> questions,
-                Dictionary<Question, List<Answer>> questionAnswerDictionary,
+                Dictionary<Question, Answer> questionAnswerDictionary,
                 Subject subject, ExamMode examMode)
         {
             if (time <= 0)
@@ -55,16 +55,16 @@ namespace Assignment_7___Examination_Management_System
         }
         public void CorrectExam(){
             int totalScore = 0;
-            foreach(KeyValuePair<Question, List<Answer>> q in QuestionAnswerDictionary)
+            foreach(KeyValuePair<Question, Answer> q in QuestionAnswerDictionary)
             {
                 if (q.Key is ChooseAll chooseAll)
                 {
-                    if (chooseAll.CheckAnswers(q.Value)) // pass to it the student Answers
+                    if (chooseAll.CheckAnswer(q.Value)) // pass to it the student Answers
                         totalScore += q.Key.Marks;
                 }
                 else
                 {
-                    if (q.Key.CorrectAnswer.Equals(q.Value[0]))
+                    if (q.Key.CorrectAnswer.Equals(q.Value))
                         totalScore += q.Key.Marks;
                 }
             }

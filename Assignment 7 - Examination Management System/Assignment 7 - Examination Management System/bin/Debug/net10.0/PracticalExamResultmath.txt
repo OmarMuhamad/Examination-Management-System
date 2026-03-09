@@ -5,13 +5,13 @@ Correct Answer: True
 Correct!
 ------------------
 Q2: What is 2 + 2?
-Your Answer:    3
+Your Answer:    4
 Correct Answer: 4
-Wrong!
+Correct!
 ------------------
 Q3: Which are even numbers?
-Your Answers: 2
+Your Answers: 2, 4, 6
 Correct Answers: 2, 4, 6
-Wrong!
+Correct!
 ------------------
-Final Grade: 10
+Final Grade: 30

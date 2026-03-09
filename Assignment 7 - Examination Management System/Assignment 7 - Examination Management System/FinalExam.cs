@@ -6,7 +6,7 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class FinalExam : Exam
     {
-        public FinalExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, List<Answer>> questionAnswerDictionary, Subject subject, ExamMode examMode)
+        public FinalExam(int time, int numberOfQuestions, List<Question> questions, Dictionary<Question, Answer> questionAnswerDictionary, Subject subject, ExamMode examMode)
         : base(time, numberOfQuestions, questions, questionAnswerDictionary, subject, examMode) { }
 
         public override void ShowExam()
@@ -30,20 +30,20 @@ namespace Assignment_7___Examination_Management_System
                 foreach (var entry in QuestionAnswerDictionary)
                 {
                     Question question = entry.Key;
-                    List<Answer> studentAnswers = entry.Value;
+                    Answer studentAnswer = entry.Value;
 
                     Console.WriteLine($"{question.Header}: {question.Body}");
                     writer.WriteLine($"{question.Header}: {question.Body}");
 
                     if (question is ChooseAll chooseAll)
                     {
-                        Console.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
-                        writer.WriteLine($"Your Answers: {string.Join(", ", studentAnswers.Select(a => a.Text))}");
+                        Console.WriteLine($"Your Answers: {string.Join(", ", studentAnswer.Text)}");
+                        writer.WriteLine($"Your Answers: {string.Join(", ", studentAnswer.Text)}");
                     }
                     else
                     {
-                        Console.WriteLine($"Your Answer: {studentAnswers[0].Text}");
-                        writer.WriteLine($"Your Answer: {studentAnswers[0].Text}");
+                        Console.WriteLine($"Your Answer: {studentAnswer.Text}");
+                        writer.WriteLine($"Your Answer: {studentAnswer.Text}");
                     }
                     Console.WriteLine("------------------");
                     writer.WriteLine("------------------");

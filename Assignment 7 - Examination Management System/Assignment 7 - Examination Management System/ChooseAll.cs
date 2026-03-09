@@ -6,27 +6,17 @@ namespace Assignment_7___Examination_Management_System
 {
     internal class ChooseAll : Question
     {
-        public List<Answer> CorrectAnswers { get; set; }
-        public ChooseAll(string header, string body, int marks, List<Answer> correctAnswers) : base(header, body, marks)
+        public ChooseAll(string header, string body, int marks, Answer answer) : base(header, body, marks, answer)
         {
-            CorrectAnswers = correctAnswers;
         }
         public override bool CheckAnswer(Answer studentAnswer)
         {
-            return CorrectAnswer.Equals(studentAnswer);
+            var correctIds = CorrectAnswer.Text.Split(' ').ToHashSet();
+            var studentIds = studentAnswer.Text.Split(' ').ToHashSet();
+
+            return correctIds.SetEquals(studentIds);
         }
-        public bool CheckAnswers(List<Answer> studentAnswers)
-        {
-            if (studentAnswers.Count != CorrectAnswers.Count)
-            {
-                return false;
-            }
-            foreach (Answer answer in studentAnswers)
-            {
-                if (!CorrectAnswers.Contains(answer)) return false;
-            }
-            return true;
-        }
+        
         public override void Display()
         {
             Console.WriteLine($"{Header}: {Body} (Select All that apply)");

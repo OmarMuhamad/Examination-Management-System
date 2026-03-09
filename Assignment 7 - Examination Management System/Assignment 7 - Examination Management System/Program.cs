@@ -30,12 +30,7 @@
             q2.AnswerList.Add(new Answer(3, "5"));
 
             // ChooseAll Question
-            ChooseAll q3 = new ChooseAll("Q3", "Which are even numbers?", 10, new List<Answer>
-            {
-                new Answer(1, "2"),
-                new Answer(3, "4"),
-                new Answer(5, "6")
-            });
+            ChooseAll q3 = new ChooseAll("Q3", "Which are even numbers?", 10, new Answer(1, "1 3 5"));
             q3.AnswerList.Add(new Answer(1, "2"));
             q3.AnswerList.Add(new Answer(2, "3"));
             q3.AnswerList.Add(new Answer(3, "4"));
@@ -49,7 +44,7 @@
             questionList.Add(q3);
 
             // 5. Create Exams
-            Dictionary<Question, List<Answer>> answerDict = new Dictionary<Question, List<Answer>>();
+            Dictionary<Question, Answer> answerDict = new Dictionary<Question, Answer>();
 
             PracticeExam practiceExam = new PracticeExam(
                 30,
@@ -95,21 +90,41 @@
 
                 if (question is ChooseAll)
                 {
-                    List<Answer> studentAnswers = new List<Answer>();
+                    var selectedIds = new List<int>();
+
                     Console.WriteLine("Enter answer IDs one by one, enter 0 to finish:");
-                    int ans = 0;
+
                     do
                     {
                         Console.Write("Enter answer ID: ");
-                        int.TryParse(Console.ReadLine(), out ans);
-                        if (ans >= 1 && ans <= numberOfAnswers)
-                        {
-                            Answer a = question.AnswerList.GetById(ans);
-                            if (a != null) studentAnswers.Add(a);
-                        }
-                    } while (ans != 0);
 
-                    selectedExam.QuestionAnswerDictionary[question] = studentAnswers;
+                        if (!int.TryParse(Console.ReadLine(), out int ans))
+                        {
+                            Console.WriteLine("Invalid input, please enter a number.");
+                            continue;
+                        }
+
+                        if (ans == 0) break;
+
+                        if (ans < 1 || ans > question.AnswerList.Count)
+                        {
+                            Console.WriteLine($"Please enter a number between 1 and {question.AnswerList.Count}.");
+                            continue;
+                        }
+
+                        if (selectedIds.Contains(ans))
+                        {
+                            Console.WriteLine("You already selected that answer.");
+                            continue;
+                        }
+
+                        selectedIds.Add(ans);
+                        Console.WriteLine($"Answer {ans} added.");
+
+                    } while (true);
+
+                    string studentAnswer = string.Join(" ", selectedIds); // extension method
+                    selectedExam.QuestionAnswerDictionary[question] = new Answer(1, studentAnswer);
                 }
                 else
                 {
@@ -119,8 +134,7 @@
                         Console.Write("Enter answer ID: ");
                     } while (!int.TryParse(Console.ReadLine(), out ans) || ans < 1 || ans > numberOfAnswers);
 
-                    selectedExam.QuestionAnswerDictionary[question] =
-                        new List<Answer> {question.AnswerList.GetById(ans) };
+                    selectedExam.QuestionAnswerDictionary[question] = question.AnswerList.GetById(ans);
                 }
 
                 Console.WriteLine("\n------------------");
